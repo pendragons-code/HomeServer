@@ -5,6 +5,7 @@ module.exports = {
 		let links = ""
 		let videosDirs = readdirSync("./Src/frontEnd/public/Videos").filter(dirs => dirs)
 		for(dirs of videosDirs) {
+			links += `<br><br><strong>${dirs}</strong><br>`
 			let videoFile = readdirSync(`./Src/frontEnd/public/Videos/${dirs}`).filter(file => file)
 			for(file of videoFile) {				
 				links += `<a href="/Videos/${dirs}/${file}">${file}</a><br>`
